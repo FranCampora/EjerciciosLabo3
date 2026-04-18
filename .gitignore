@@ -53,3 +53,45 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Binarios comunes
+main
+program
+a.out
+
+# =========================
+# Makefiles temporales
+# =========================
+Makefile~
+*.mk~
+
+# =========================
+# Backups / archivos basura
+# =========================
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Copias tipo "copia" o "otra copia"
+* (copia)*
+* (otra copia)*
+
+# Carpetas basura
+.Trash*
+trash/
+tmp/
+
+
+# =========================
+# Config del sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code (si usás)
+# =========================
+.vscode/
+
