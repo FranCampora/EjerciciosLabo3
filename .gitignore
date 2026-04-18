@@ -31,10 +31,12 @@
 # Executables
 *.exe
 *.out
+*.o
 *.app
 *.i*86
 *.x86_64
 *.hex
+programaExe
 
 # Debug files
 *.dSYM/
@@ -78,10 +80,11 @@ Makefile~
 * (copia)*
 * (otra copia)*
 
-# Carpetas basura
+# basura
 .Trash*
-trash/
-tmp/
+*~
+*.bak
+*.tmp
 
 
 # =========================
