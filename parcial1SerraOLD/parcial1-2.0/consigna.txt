@@ -1,0 +1,23 @@
+
+
+En una entidad Bancaria, se destina por medio de un sistema de control (llamado "tu dolar") la compra de dólares.
+El banco informa el valor de los dólares, a dos cajeros automáticos que hay en el banco, donde los cajeros solo manejan “Pesos”. 
+Se cuenta con el proceso “banco” y con el proceso “cajero”.
+
+Trabaja con dólar MEP ($1150 es U$D1 ), dólar Oficial ($1100 es U$D1), y para los informales les permite la compra de dólar Blue ($1250 es U$D1).
+
+Se contaran con 4 usuarios, que cada uno tendrá $500000 en cuenta (esto estará en el banco). 
+Luego de que se acabe el dinero del usuario no puede volver a comprar. 
+
+Se puede realizar de modo aleatorio o ingreso por menú, la compra de dólares, 
+donde el cajero selecciona la cantidad a comprar, ya sea en dólares, o en pesos, y se resta del banco, la cantidad adquirida. 
+Se debe elegir previamente el numero de usuario (1 al 4) del cual se desea extraer el dinero.
+
+Para comunicar debe utilizarse semáforo y archivos.
+
+Cada proceso debe mostrar en pantalla las operaciones que van sucediendo!
+
+Bonus: Se debería poder realizar ingresos de dinero para cada usuario (depósitos) en efectivo.
+
+En total son 3 procesos corriendo en forma simultanea.
+Se debe mostrar la actividad de cada proceso. 

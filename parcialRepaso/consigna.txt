@@ -1,0 +1,45 @@
+Compras en el super:
+En un supermercado, se destina por medio de un sistema de
+control (llamado "super derivador") a cada caja que
+corresponda cada comprador según la cantidad de productos
+que haya elegido. Todos los compradores hacen una única
+fila y se cuenta con 3 cajas. Cada caja tiene una cantidad
+mínima y máxima de unidades permitidas y por donde cada
+comprador deberá realizar su pago, dependiendo de sus
+unidades.
+La caja 1 es de 1 a 5 unidades, la caja 2 es de 6 a 10 unidades
+y la caja 3 de 11 unidades en adelante.
+Se contará con un array (arreglo) de estructuras, en la que
+cada estructura cuenta con el precio y la descripción del
+producto.
+Realizar un menu para el "super derivador" que permita el
+ingreso por teclado de la descripción del producto y del
+precio.
+Dependiendo la cantidad de unidades se dirigirá a cada caja.
+Se contará con un proceso por cada caja (3 cajas).
+Para comunicar puede/debe utilizarse semáforo y/o
+archivos.
+
+La caja que le corresponda debe mostrar el precio total que
+debe pagar el comprador, y no debe repetirse el
+mensaje/precio anterior.
+Cada 100ms cada caja debe chequear si tiene un nuevo
+comprador.
+En total son 4 procesos corriendo en forma simultanea.
+Se debe mostrar la actividad de cada proceso.
+Consignas
+1 Leer todo el enunciado.
+2 Resolver el ejercicio.
+3 Enviar las resolución como respuesta a esta actividad en archivo comprimido .tar o
+.tar.gz
+Condiciones de corrección (si no se cumple lo siguiente, no se corrige)
+• El programa debe compilar sin errores.
+• El programa debe correr sin errores de memoria.
+• Debe estar correctamente identado.
+• Utilizar constantes.
+Puntos a tener en cuenta
+• Los nombres de las variables deben ser descriptivos de su función (sobre todo en el
+main).
+• Comentar el código todo lo posible.
+• Toda variable o arreglo definido en forma dinámica debe ser liberado al finalizar el
+programa.

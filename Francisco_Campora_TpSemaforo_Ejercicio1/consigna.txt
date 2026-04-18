@@ -1,0 +1,26 @@
+Ejercicio 1
+Una aerolínea posee dos sistemas, uno de CARGA y otro de RESERVAS:
+a) CARGA. El sistema de carga permite la carga de vuelos con los siguientes datos:
+VUELO (1000 a 1010)
+DESTINO (Ciudades)
+NOMBRE (Nombre del pasajero)
+La carga finaliza con vuelo = 0 y se genera un lote en un archivo lote.dat. Este archivo
+se deberá crear -si no existe- y agregarle datos en caso de que exista (utilizar
+semáforos).
+Es posible cargar cualquier cantidad de lotes.
+b) RESERVAS. El sistema de reservas procesa las reservas cargadas en los lotes. Cada
+vez que en encuentra un nuevo lote, lo procesa actualizando en pantalla el total de
+reservas recibidas:
+(en todos los lotes)
+VUELO DESTINO PASAJEROS
+1001 BARAJAS 5
+1002 CARACAS 2
+Una vez procesado el lote.dat, renombrarlo como lote.999.dat (donde 999 es una
+secuencia correlativa de lotes recibidos 000, 0001, 002, etc.).
+Importante
+• La solución debe estar desarrollada en 2 procesos comunicados por medio de 1
+archivo de lotes (lote.dat) y utilizando semáforos.
+• El sistema de CARGA es independiente y puede realizar la carga de lotes siempre y
+cuando pueda acceder al archivo de lote.dat; caso contrario, indicar que se está
+esperando el acceso.
+• El sistema de RESERVAS controla si hay un nuevo lote cada 300 ms.

@@ -1,0 +1,16 @@
+Alumno: Joaquin Serra
+Legajo: 0133581
+Fecha: 
+
+Primer parcial laboratorio 3
+
+
+Se debe ejecutar ./banco en primer lugar para inicializar el semaforo
+Luego se pueden ejecutar los cajeros 1 y 2
+(Se manejan los errores si se ejecuta primero algún cajero y si no se le pasan correctamente los parametros)
+
+El "banco" lee y muestra el archivo con los saldos de los usuarios, utilizando los semaforos antes y despues de leer
+
+Los "cajeros" permiten el ingreso de los datos en cualquier momento, espera el semaforo antes de escribir en el archivo
+
+

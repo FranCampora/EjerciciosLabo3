@@ -1,0 +1,41 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>
+#include <time.h>
+#include <unistd.h>
+
+#include "define.h"
+#include "semaforo.h"
+#include "archivos.h"
+#include "global.h"
+#include "funciones.h"
+
+int main(int arg, char *argc[])
+{
+	int id_semaforo;
+
+	printf("\nProceso BANCO\n");
+	
+/*creo e inicializo el semaforo*/
+	id_semaforo = crearSemaforo();
+	iniciarSemaforo(id_semaforo);
+	
+
+	cargarArchivoInicial();
+
+	while(1)
+	{
+		esperarSemaforo(id_semaforo);
+
+		printf("\nSaldos actuales\n");
+		leerArchivo(ARCHIVO);	
+	
+		levantarSemaforo(id_semaforo);
+		usleep(5000 * MS);
+	}
+
+	return 0;
+}
+

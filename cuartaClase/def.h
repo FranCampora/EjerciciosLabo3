@@ -1,0 +1,12 @@
+#ifndef _DEF_H
+#define _DEF_H
+
+#define TRUE 1
+#define FALSE 0
+#define DESDE 0
+#define HASTA 50
+#define LOTE 10
+#define PATH_CLAVE "/bin/ls"
+#define ENTERO_CLAVE 33
+
+#endif

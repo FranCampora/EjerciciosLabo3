@@ -1,0 +1,56 @@
+#include "stdio.h"
+#include "stdlib.h"
+#include "funciones.h"
+#include "def.h"
+#include "global.h"
+#include "time.h"
+#include "archivos.h"
+
+int main(int argc, char *argv[]){
+	/*int idNumeroAl=0;*/
+	int inRes = 0;
+	int iProducido = 1; 
+	int iConsumido = 1;
+	/*
+	srand(time(NULL));
+	idNumeroAl=idNumeroAleatorio(DESDE,HASTA);	
+	printf("\n Numero: %d\n",idNumeroAl);
+	*/
+	inRes = abrirArchivo("producto.txt","w");
+	if(inRes == TRUE){
+		printf("\n PRODUCIENDO LOTE DE %d CANTIDAD DE PRODUCTOSS\n", LOTE);
+		while(iProducido <= LOTE){
+			producirProducto(iProducido);
+			iProducido++;		
+		}
+		cerrarArchivo();
+
+	
+	}else{
+		printf("HUBO UN ERROR AL ABRIR EL FILE");
+	}
+	/*producirProducto();*/
+	inRes = abrirArchivo("producto.txt","r");
+	if(inRes == TRUE){
+		printf("\n CONSUMIENDO PRODUCTO\n");
+		while(iConsumido <= LOTE){
+			consumirProducto();
+			iConsumido++;		
+		}
+		cerrarArchivo();	
+	}else{
+		printf("HUBO UN ERROR AL FILE\n");
+	}
+	/*PREGUNTA 3: Primero se produce 10 productos, uno a uno e imprimiendo cada linea hasta llegar a LOTE que fue definido en def.h. Al consumirse se ejecuta un "r" y se lee linea por linea hasta llegar a la cantidad de LOTE*/
+
+	/*PREGUNTA 4: Para una industria real cada vez que se consume se deberia borrar la linea, la falla seria sii tiene que leer y borrar sin producir anteoriormente*/
+
+
+	/*CORRECIONES DE CLASE
+	capaz tengo que volver a cerrar el file luego de que hubo un error al abrir el file?
+	tiene que cortar cuando termine el file, no con el lote
+		tengo que poder producir y consumir a la vez, 
+
+	*/
+	return 0;
+}
