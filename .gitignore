@@ -1,0 +1,57 @@
+# =========================
+# Compilación C
+# =========================
+*.o
+*.out
+*.exe
+
+# Librerías
+*.a
+*.so
+*.dll
+
+# Ejecutables
+main
+program
+a.out
+programaExe
+
+# =========================
+# Makefiles temporales
+# =========================
+Makefile~
+*.mk~
+
+# =========================
+# Backups / basura
+# =========================
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Copias
+* (copia)*
+* (otra copia)*
+
+# Carpetas basura
+.Trash*
+
+# =========================
+# Debug (opcional)
+# =========================
+*.pdb
+*.idb
+*.dSYM/
+
+# =========================
+# Sistema
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VS Code
+# =========================
+.vscode/
