@@ -1,65 +1,20 @@
-# Prerequisites
-*.d
-
-# Object files
+# =========================
+# Compilación C
+# =========================
 *.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
 *.out
-*.o
-*.app
-*.i*86
-*.x86_64
-*.hex
-programaExe
+*.exe
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Librerías
+*.a
+*.so
+*.dll
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# debug information files
-*.dwo
-
-# Binarios comunes
+# Ejecutables
 main
 program
 a.out
+programaExe
 
 # =========================
 # Makefiles temporales
@@ -68,7 +23,7 @@ Makefile~
 *.mk~
 
 # =========================
-# Backups / archivos basura
+# Backups / basura
 # =========================
 *~
 *.bak
@@ -76,25 +31,27 @@ Makefile~
 *.swp
 *.swo
 
-# Copias tipo "copia" o "otra copia"
+# Copias
 * (copia)*
 * (otra copia)*
 
-# basura
+# Carpetas basura
 .Trash*
-*~
-*.bak
-*.tmp
-
 
 # =========================
-# Config del sistema
+# Debug (opcional)
+# =========================
+*.pdb
+*.idb
+*.dSYM/
+
+# =========================
+# Sistema
 # =========================
 .DS_Store
 Thumbs.db
 
 # =========================
-# VS Code (si usás)
+# VS Code
 # =========================
 .vscode/
-
