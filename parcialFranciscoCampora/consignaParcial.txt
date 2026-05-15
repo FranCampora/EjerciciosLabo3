@@ -1,0 +1,52 @@
+Las inversiones:
+En una entidad financiera, se desarrolla un sistema de
+control y gestión financiera, la cual recibe las inversiones de
+cada usuario que quiera invertir. En total habrá 3 usuarios.
+
+La entidad financiera maneja la remuneración de las
+ganancias por la inversión en su entidad, que el minimo debe
+ser de $10.000. Esta ganancia será anual y será del doble de
+lo que se coloque, por ejemplo $10.000, se ganará $20.000 al
+cabo de un año
+Cada usuario ingresa al comenzar su nombre y apellido.
+Cada año (que se representará por vuelta y por un delay de 1
+segundo) el usuario coloca el valor que quiere invertir por
+menú (teclado), dicho valor junto con el nombre y apellido
+se guardará en archivo independiente. La primera vuelta, no
+verá ninguna inversión o monto (o si se quiere si). Pero
+luego de la primera vuelta, la segunda vuelta verá la ganancia
+que generó el primer año, y dará lugar a una nueva inversión
+(si se quiere empezar de 0, o si se quiere sumar a lo que ya
+gano).
+La entidad financiera por lo tanto recibirá del archivo la
+inversión, y pagará el doble de lo que invierta el usuario. LA
+ENTIDAD FINANCIERA ES QUIEN PAGA EL
+DOBLE DE LO INVERTIDO.
+
+
+Se contará con un array (arreglo) de estructuras, en la que
+cada estructura cuenta con el nombre apellido y el o los
+montos (un único monto, o dos saldos, uno de inicio y otro
+de fin).
+Opcional:
+-Llevar en un archivo de inversiones01.dat,
+inversiones02.dat…, y así con cada uno, el resumen de las
+inversiones por usuario.
+-Llevar el total de dinero invertido en la entidad financiera, si
+se quiere mejor aún llevar ese control por año.
+Para comunicar puede/debe utilizarse semáforo y/o
+archivos.
+En total son 4 procesos corriendo en forma simultánea.
+Se debe mostrar la actividad de cada proceso.
+Puede agregar algún tipo de solución para poder correr cualquier
+proceso primero.
+Consignas
+1 Leer todo el enunciado.
+2 Resolver el ejercicio.
+3 Enviar las resolución como respuesta a esta actividad en archivo comprimido .tar o
+.tar.gz
+Condiciones de corrección (si no se cumple lo siguiente, no se corrige)
+• El programa debe compilar sin errores.
+• El programa debe correr sin errores de memoria.
+• Debe estar correctamente identado.
+• Utilizar constantes.

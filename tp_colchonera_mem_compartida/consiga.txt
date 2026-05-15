@@ -1,0 +1,31 @@
+Hay dos procesos: COLCHONERIA y VENDEDOR.
+
+Estos procesos utilizan MEMORIA COMPARTIDA: 5 registros.
+
+Struct descripción
+{
+Int código;
+Int cantidad;
+char nombre[LARGO_NOMBRE];
+}
+
+
+Proceso COLCHONERÍA: (COLCHONERIA)
+1. Carga la descripción de cada código por programa. La cantidad inicial es para todos
+10;
+2. 1 PIERO, 2 SUAVESTAR, 3 CANNON, 4 SIMMONS, 5 BELMO
+3. Espera SEMÁFORO
+4. Revisa la cantidad de cada COLCHÓN; si es menor que 10, suma 1 al stock (SIEMPRE).
+NUNCA SE PASA DE 10.
+5. Libera SEMÁFORO.
+6. Espera 500ms.
+7. Repite desde el punto 2.
+
+
+
+
+Proceso VENDEDOR:
+1. Espera SEMÁFORO.
+2. Solicita por TECLADO (OBLIGATORIO) un código y cantidad (1 a 5).
+3. Resta esta cantidad al código seleccionado. NUNCA DEJA EL STOCK MENOR QUE 0.
+4. Libera SEMÁFORO.

@@ -1,0 +1,34 @@
+Consignas 
+
+Producción de medicamentos con control:
+
+En una entidad de productos farmacologicos, se destina por medio de un sistema de control (llamado "tu medicamento") 
+la realización y la derivación de cada medicamento. 
+En este caso se realizarán 3 medicamentos aleatoriamente, y cada tipo de medicamento se separa en 
+tandas de: 5, 10 y 20 pastillas por cada medicamento. 
+O sea, aleatoriamente se elije el tipo de medicamento a realizar, 
+y su color de la capsula, de 1 a 3, pudiendo repetirse los colores (siendo 1 Rojo, 2 Amarillo, 3 Fucsia). 
+
+Independientemente del medicamento, se deriva según su cantidad al sistema de control, siendo el sistema A (5 pastillas), 
+el sistema B (10 pastillas) y el sistema C (20 pastillas) donde se empaquetan las pastillas. 
+Por lo que se debe luego del tipo de medicamento, realizar un menu que permita el ingreso por teclado de la cantidad
+ de pastillas a realizar (5, 10 ó 20).
+
+Se contará con un array (arreglo) de estructuras, en la que cada estructura cuenta con el color de la pastilla,
+ el sistema al que pertenece según cantidad (ósea un entero con la cantidad, y el tipo A, B ó C si se requiere),
+  y la descripción del producto/medicamento si se desea. 
+
+.
+ 
+Dependiendo la cantidad de unidades se dirigirá a cada sistema de control de medicamentos.
+ Se contará con un proceso por cada sistema de control (3 sistemas).
+ 
+Para comunicar puede/debe utilizarse semáforo y/o archivos.
+
+Cada sistema de control debe mostrar la totalidad de medicamentos y pastillas realizadas, por cada sistema (A, B, ó C).
+
+Cada 100ms cada sistema debe chequear si tiene nuevos medicamentos a realizar.
+
+En total son 4 procesos corriendo en forma simultanea.
+Se debe mostrar la actividad de cada proceso. 
+

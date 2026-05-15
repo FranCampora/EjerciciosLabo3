@@ -1,0 +1,37 @@
+
+Comida rápida con sistema de control:
+
+En un resto de Palermo Hollywood se destina por medio de un sistema de control llamado “tu comida” la realización 
+y la derivación de cada orden de comida. 
+En este caso se realizarán 3 tipos de ordenes que se brindan en el menú ejecutivo, 
+y dependen del precio, por lo que esta el Menu A ($1000), Menú B ($2000), y Menú C ($3000). 
+O sea, aleatoriamente se elije el tipo de menú a realizar. 
+Cada menú puede contener o no postre (se incrementa el precio $200).
+
+Se deriva según el menú que salió, al sistema de control, siendo el sistema A (menú A), 
+el sistema B (menú B) y el sistema C (menú C) donde se prepara el pedido. 
+Por lo que se debe luego de elegir el tipo de menú, 
+solicitar si va a querer o no postre (agregar un menu que permita el ingreso por teclado si quiere o no postre).
+
+Se contará con un array (arreglo) de estructuras, en la que cada estructura cuenta con el tipo de menú seleccionado,
+ si va a querer o no postre y el precio (puede ser parcial o total). 
+ Manejar el array a gusto, pero podría ser una variable struct o enum, 
+ o define para el tipo de menú, una cadena de caracteres, float o entero para el/los precios, 
+ un char o entero para saber si es con o sin postre, 
+ y una cadena de caracteres si se desea con la descripción del menú (opcional). 
+ Se aclara que están bienvenidas otras opciones, por ejemplo tener otras estructuras dentro de la estructura principal, 
+ o manejar los precios separados. 
+ 
+Dependiendo el menú elegido (A, B, C) se dirigirá a cada sistema de control de menues.
+ Se contará con un proceso por cada sistema de control (3 sistemas).
+ 
+Para comunicar puede/debe utilizarse archivos y/o semáforos para el sincronismo.
+
+Cada sistema de control debe mostrar la totalidad de menues realizados, por cada sistema (A, B, ó C) y sus precios.
+
+Cada 100ms cada sistema debe chequear si tiene nuevos menues a realizar.
+
+En total son 4 procesos corriendo en forma simultanea.
+Se debe mostrar la actividad de cada proceso. 
+
+

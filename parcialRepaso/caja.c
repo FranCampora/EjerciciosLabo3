@@ -40,11 +40,12 @@ int main(int argc, char *argv[])
     id_semaforo = creo_semaforo();
 
 
-    printf("Cajero iniciado: %d\n", numeroCajero);
-    
+    printf("Cajero %d listo. Enter para comenzar a trabajar.\n", numeroCajero);
+    getchar();
+
     while (1)
     {
-        usleep(100*1000);/*osea 100ms*/
+        
         espera_semaforo(id_semaforo);
 
         if (abrirArchivo(NOMBRE_FILE, "r") == TRUE){
@@ -78,6 +79,7 @@ int main(int argc, char *argv[])
             printf("esperando el archivo del cajero %d\n", numeroCajero);
         }
         levanta_semaforo(id_semaforo);/*sale del super */
+        usleep(2000*1000);/*osea 100ms*/
     }   
     /*usleep(2000*1000);*/
     return 0;
