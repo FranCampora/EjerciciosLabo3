@@ -1,0 +1,64 @@
+ue partido!:
+
+En el clásico de futbol de primera, se cuenta con dos
+equipos que juegan un partido. Debe ingresar el nombre del
+equipo.
+El partido termina cuando uno de los equipos llega a la
+cantidad máxima de goles que debe ser ingresada por teclado
+(ESTE VALOR DEBE SER COMPARTIDO DE UN
+PROCESO INICIAL AL OTRO, USANDO MEMORIA
+COMPARTIDA).
+
+Es un partido por turnos, en cada turno se realiza el remate
+de cada equipo. 
+
+Para el remate se debe solicitar que presione numero
+
+osea con 3 random es acertar. 4 y 5 random es no acertar.
+
+(ingresa por pantalla) un numero de 3 al 6, y a la par hacer
+un numero aleatorio ( 3 a 5), 
+
+si sale 3 y acierta (se
+corresponde con el número informado), es gol de jugada. 
+
+Si se ingresa 4 y acierta es gol de penal, 
+si ingresa 5 y acierta es gol de tiro libre. 
+Si no acierta y es 3 es palo. 
+Si no acierta y es 4 el numero ingresado es fuera. 
+Si no acierta y es 5 el numero ingresado, es lateral.
+
+La información deberá ser enviada por cola de mensajes, y
+debería contar con dos procesos. Uno debería ser el
+estadio/cancha y el otro los equipos.
+
+Cancha: Todo lo que va sucediendo debe ir informándose en
+el proceso cancha. Y debería recibir el remate de los equipos,  revisar que numero aleatorio salio, mostrar y guardar lo que
+sucedio y contestarle al equipo.
+
+En el final del partido se debe informar el ganador y los goles. 
+El primero en llegar a la cantidad máxima de goles ingresada por teclado gana.
+Para comunicar debe utilizar cola de mensajes.
+
+ Y para el
+sincronismo Threads.
+En total son 2 procesos corriendo en forma simultanea.
+Se debe mostrar la actividad de cada proceso.
+Debe poder correr cualquier proceso primero utilizando archivo tipo flag-.
+Concentrarse en un MVP, funcional.
+Consignas
+1 Leer todo el enunciado.
+2 Resolver el ejercicio.
+3 Enviar las resolución como respuesta a esta actividad en archivo comprimido .tar o
+.tar.gz
+Condiciones de corrección (si no se cumple lo siguiente, no se corrige)
+• El programa debe compilar sin errores.
+• El programa debe correr sin errores de memoria.
+• Debe estar correctamente identado.
+• Utilizar constantes.
+Puntos a tener en cuenta
+• Los nombres de las variables deben ser descriptivos de su función (sobre todo en el
+main).
+• Comentar el código todo lo posible.
+• Toda variable o arreglo definido en forma dinámica debe ser liberado al finalizar el
+programa

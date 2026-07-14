@@ -1,0 +1,97 @@
+
+Consignas 
+
+Figuritas menu:
+
+
+Cercano al mundial, se crea un juego que tiene como objeto juntar un álbum de figuritas, siendo que juegan jugadores, 
+y el primero que lo llena gana o el que mas figuritas tenga. 
+
+En este juego la cantidad de jugadores se pasará por parámetro y debe ser de entre 2 y 4 jugadores. 
+Se contará con un album, de 70 figuritas.
+
+
+Cada jugador inicia con $1600 (este valor se pasa del proceso inicializador al otro usando memoria compartida), y
+ cada paquete cuesta $50. 
+
+
+Cada jugador por vuelta, de manera aleatoria, comprara paquetes 
+(aleatorio de 1 a 5. 
+Si sale 1 compra 1 paquete, si sale 2, compra 2 paquetes, 
+pero si sale 3 o 4 o 5 no compra nada y pasa de turno).
+
+
+En el kiosco hay 50 paquetes. 
+Cada jugador abrirá un sobre con 5 figuritas. 
+(el numero aleatorio ira de 10 a 60, o sea las figuritas en el album) Y pegara las figuritas. 
+Si le salen repetidas las guarda.
+
+La figurita 2 al 10 son especiales pero salen en numero aleatorio del 2 al 30, siendo que si sale del 2 al 10 son de las especiales, sino no sirven. 
+Solo una por vuelta, o sea, tiene otro numero aleatorio que va de 1 a 2, y que decide si va a ser el de las figuritas normales, o de las especiales. 
+Si completa las especiales, o las normales, no estaría pasando por el que ya esta completo. 
+
+
+Si se queda sin dinero tampoco puede comprar mas.
+
+
+Son dos procesos, el proceso kiosco, que debe restar un sobre cada vez que los jugadores hayan comprado uno (solo se vende uno por vez), y el proceso jugadores.
+El jugador cuando no queden mas paquetes, y tenga más figuritas pegadas ganan.
+
+
+USAR Estructuras.
+
+
+OPCIONAL: Guardar en archivo los paquetes comprados, las figuritas en el álbum que tiene pegadas y el dinero final que le queda si le queda o si no le queda en $0 a cada jugador.
+
+
+Se debe utilizar threads, cola de mensajes, y para el sincronismo usar mutex.
+
+
+Puede utilizar los siguientes destino y eventos, o los que usted elija.
+
+
+typedef enum {
+     MSG_NADIE,    //0
+     MSG_KIOSCO,  //1
+     MSG_JUGADOR.., // 2  //y aca sumar automáticamente, o limitarlo, pero no deberia
+     MSG_JUGADO2, // 3
+     MSG_JUGADOR3, // 4
+} Destinos;
+
+
+typedef enum {
+EVT_NINGUNO, //0 
+EVT_COMPRO, //1
+EVT_FIN, //2 
+} Eventos; //Podria tener el EVT_INICIO tmb y otros eventos.
+	
+Se debe mostrar lo que sucede en los procesos en todo momento, y cual jugador gano, el dinero, etc.
+
+
+Debe utilizar archivos, para que pueda ejecutarse cualquier proceso primero.
+
+
+Se puede hacer que comience presionando una tecla.
+
+
+Pensar bien que/quien es cada proceso! Comenzar por lo mínimo, lo más importante es el sincronismo y que compile!.
+
+
+Utilizar Makefile con la estructura de archivos vista en la cursada.
+Utilizar los delay (sleep) que correspondan.
+Consignas 
+
+1) Leer todo el enunciado.
+2) Resolver el ejercicio.
+3) Enviar las resolución como respuesta a esta actividad en archivo comprimido .tar o .tar.gz
+
+Condiciones de corrección (si no se cumple lo siguiente, no se corrige)
+El programa debe compilar sin errores.
+El programa debe correr sin errores de memoria.
+Debe estar correctamente identado.
+Utilizar constantes.
+
+Puntos a tener en cuenta
+Los nombres de las variables deben ser descriptivos de su función (sobre todo en el main).
+Comentar el código todo lo posible.
+Toda variable o arreglo definido en forma dinámica debe ser liberado al finalizar el programa.

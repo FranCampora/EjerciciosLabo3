@@ -1,0 +1,64 @@
+BOLERA
+ Creo todas las vars, y la struct de MENSAJE y de JUGADOR
+ creo la cola de mensajes
+ reservo espacio en mem con malloc para los jugadores * maxusers (2)
+ incializo con un fori (limite maxusers) los atributos de la struct jugadores
+ crear file de sincronismo
+ borro los mensajes de la cola de mensajes
+ENTER
+1a. mando evento inicio a los jugadores con un fori 
+    destino jugador : es el numero del jugador dentro del fori
+    enviar mensaje pasandole evento de inicio
+
+9a. dentro de while done == 0
+recibe un evento del thread osea del jugador de TIRO
+10a. calculo el tiro 
+11a. aplico logica para chekear los pinos tirados
+12a. si no se finalizo todavia se envia mensaje con evento resultado 
+
+
+
+
+
+
+
+
+-----------------------
+JUGADOR
+
+creo var locales, struct de jugador 
+esperar file de sincronismo
+iniciar variables de thread y mutex y detachstate
+ENTER
+reservo memoria para CADA HILO 
+incializo con un fori (limite maxusers) los atributos de la struct jugadores
+
+1 b. creo los hilos con pthread craete y punteroa  funcion de funcionThread
+---se queda esperando que terminen los hilos de thread osea los hijos
+
+
+
+
+
+
+
+
+----------
+THREAD
+creo var locales y DE MENSAJE
+2b. EL PARAMETRO QUE RECIBE LA FUNCION LA ASOCIO  A UN STRUCT DE JUGADOR
+
+2a. recibe el mensaje 
+3a. lock de mutex
+4a. switch del case
+5a. primero va ser inicio
+6a. unlock
+7a. printea
+8a. abre un while done == 0 y enviar mensaje al BOLERO LLAMANDOSE COMO EL PROCESO JUGADOR (OSEA SU PADRE)
+Y EVENTO TIRO
+13a. recibe mensaje del BOLERO
+14a. lock mutex
+15a. chekea evt resultado y agarra el mensaje que le dio que fue de los pinos tirados y le hace un atoi 
+16a. da un break y da un unlock del mutex
+17a. exit del hilo
+me quede aca en el paso 18a

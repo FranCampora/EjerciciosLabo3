@@ -1,0 +1,60 @@
+MonoNipoly:
+
+Se juega a un juego clásico, financiero, el MonoNipoly
+En este juego la cantidad de jugadores se pasará por parámetro. 
+Se contará con una pista, que tendrá 40 pasos. Cada jugador por vuelta, de manera aleatoria, hara los pasos, los cuales van de 0 a 3 (siendo 0 que no avanza). 
+
+Cada jugador empieza con un monto que se ingresará por teclado, y puede ser de $500 a $800, los cuales se deben enviar desde un proceso a otro, usando memoria compartida.
+
+En el tablero del juego, que va desde la posición de inicio (0) siendo la primera la (1), hasta la (40), cada posición puede tener diversas recaudaciónes o recompensas. Si pierde todo su dinero, pierde el jugador pierde el juego, siguen los demas:
+
+Posición 2: Compra caramelos, pierde $50
+Posición 3: Cuota de la universidad, pierde $80 
+Posición 6: Impuestos, pierde $150
+Posición 7: Cumple años, recibe $160
+Posición 9: Paga la jubilación, pierde $50
+Posición 12: Entra a la cárcel, pierde un turno.
+Posición 13: Choca el auto, pierde $450
+Posición 15: Realiza un trabajo, gana $350
+Posición 17: Le roban, pierde un turno
+Posición 20: Gana la lotería, gana $800
+Posición 22: Vende un sillón, gana $115
+Posición 23: Pierde la billetera, pierde $390
+Posición 25: Pierde un turno
+Posición 27: Bitcoin baja, pierde $150
+Posición 29: Bitcoin sube, gana $150
+Posición 30: Se compra un auto, pierde $900
+Posición 32: Vende el auto, gana $500
+Posición 33: Se casa, pierde $450
+Posición 35: Compra comida, pierde $15
+Posición 36: Vende la tele, gana $60
+Posición 38: Pierde un turno
+Posición 39: Hace otro trabajo, gana $300
+Posición 40: Recibe $100. Ultima posición, si la pasa termino.
+
+El jugador que llega primero, gana $120 (opcional)
+El jugador que termina con más dinero gana el juego.
+
+Se debe utilizar threads, cola de mensajes, y para el sincronismo usar mutex.
+Pueden ser un proceso por jugador, pero le conviene más que sean dos procesos, uno de los procesos sea pista/tablero y el otro proceso sean los jugadores(threads).
+
+Puede utilizar los siguientes destino y eventos, o los que usted elija.
+
+Se debe mostrar lo que sucede en los procesos en todo momento, y cual jugador gano, el dinero y el resultado.
+
+Debe utilizar archivos, para que pueda ejecutarse cualquier proceso primero.
+
+Se puede hacer que comience la carrera presionando una tecla.
+
+Pensar bien que/quien es cada proceso! Comenzar por lo mínimo, lo más importante es el sincronismo y que compile!.
+
+Utilizar Makefile con la estructura de archivos vista en la cursada.
+Utilizar los delay (sleep) que correspondan.
+Consignas 
+
+
+1) Leer todo el enunciado.
+2) Resolver el ejercicio.
+
+3) Enviar las resolución como respuesta a esta actividad en archivo comprimido .tar o .tar.gz
+

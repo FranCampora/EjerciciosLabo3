@@ -1,0 +1,6 @@
+Pez 1: MURIO
+Pez 2: MURIO
+Pez 3: MURIO
+Tiburon 4: SOBREVIVIO
+Pulpo 5: SOBREVIVIO
+Pulpo 6: SOBREVIVIO

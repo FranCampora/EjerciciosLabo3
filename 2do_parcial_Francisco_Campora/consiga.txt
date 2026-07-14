@@ -1,0 +1,66 @@
+CONSIGNA 2DO PARCIAL FRANCISCO CAMPORA
+
+
+
+Las Inversiones :
+En una aplicación de inversiones, se dara la posibilidad a los
+usuarios de sumarse al FCI (fondo común de inversión).
+Para esto deberán tener dinero en cuenta, por lo que las
+operaciones a realizar son:
+-Transferencia ingreso dinero
+-Transferencia retiro dinero
+-Saldo en cuenta
+-Ganancias (opcional, por mas que deberá mostrar los
+totales con dinero inicial y dinero final)
+
+El nombre del FCI se debe ingresar por teclado, y se debe
+compartir a los usuarios junto con el horario que permite
+trabajar (10 a 16hs), por memoria compartida (del proceso
+inicial al otro proceso). 
+
+Sale un numero aleatorio de 1 a 24
+cada vez que el usuario quiera operar, si esta dentro del
+horario operativo puede operar, sino le toca a otro usuario.
+
+El dinero en cuenta genera 23% anual de TNA (0,23 cada 12
+meses, puede calcular el mensual, o el diario).
+
+Tendrá 2 procesos, uno de Entidad financiera (FCI) y otro
+proceso con 3 usuarios.
+
+El dinero en cuenta de cada usuario se actualiza una vez por
+día, por lo que cada día se tiene que transferir la ganancia, lo
+puede hacer mediante teclado o automáticamente.
+
+En todo momento los dos procesos y subprocesos deben
+mostrar todo lo que sucede y las comunicaciones, pero el
+proceso entidad financiera debe mostrar el total del FCI y las
+ganancias diarias sobre el total.
+
+Extra: Guardar en archivo Los retiros de dinero.
+
+Se contará con dos procesos.
+Se debe utilizar threads, cola de mensajes, y para el
+sincronismo usar mutex.
+
+Puede utilizar los destinos y eventos que usted elija. 
+Para la
+comunicación entre procesos debe utilizar cola de mensajes.
+
+Se debe mostrar lo que sucede en los dos procesos en todo
+momento y los resultado.
+
+Debe utilizar archivos, para que pueda ejecutarse
+cualquier proceso primero.
+
+Se puede hacer que comience la carrera presionando una
+tecla.
+
+Pensar bien que/quien es cada proceso! Comenzar por
+lo mínimo, lo más importante es el sincronismo, que
+comunique y que compile!.
+Si utiliza memoria dinámica debe liberar la memoria!
+© Universidad de Palermo. Prohibida la reproducció n total o parcial de imá genes y textos.
+3
+Utilizar Makefile con la estructura de archivos vista en la cursada.
+Utilizar los delay (sleep) que correspondan.

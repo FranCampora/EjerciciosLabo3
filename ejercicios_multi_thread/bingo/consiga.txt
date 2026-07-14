@@ -1,0 +1,58 @@
+Ejercicio 2: Bingo
+Un BINGO está representado por proceso BINGO y otro JUGADORES con varios threads (uno
+por jugador).
+Utiliza cola de mensajes con los siguientes IDs:
+MSG_NADIE 0
+MSG_BINGO 1
+MSG_JUGADOR 2 //Cada thread le suma uno a este define.
+Eventos:
+EVT_NINGUNO 0
+EVT_BOLILLA 1 // Lleva como parámetro el número de bolilla (1 al 99)
+EVT_CARTON_LLENO 2 //
+Proceso JUGADORES:
+Recibe por parámetro la cantidad de Jugadores.
+El hilo principal (main):
+• Lanza tantos ThreadJugadores como jugadores se haya ingresado por parámetro.
+• Se queda esperando que terminen los threads.
+• Al finalizar los threads, se debe mostrar la cantidad recibida de aciertos de cada uno de ellos.
+ThreadJugador(uno por jugador): (MSG_JUGADOR+nroJugador)
+Cada ThreadJugador genera al azar 5 números del 1 al 99, y los guarda en un vector
+(intcarton[5]). Y realiza lo siguiente:
+1- Espera recibir un mensaje MSG_JUGADOR (+el número de jugador).
+2- Cada vez que recibe un EVT_BOLILLA, verifica si tiene ese número en el cartón; en caso de
+acierto, suma 1 a la variable cant_aciertos (local del thread e inicializada en 0).
+3- Mostrar por pantalla la cantidad de aciertos.
+4- Si completo el cartón:
+a. Envía al proceso BINGO (MSG_BINGO) el evento EVT_CARTON_LLENO
+b. Envía un EVT_CARTON_LLENO a los demás jugadores, incluido a el mismo.
+5- Si recibe un mensaje EVT_CARTON_LLENO, devuelve la cantidad de aciertos y finaliza el
+hilo.
+Proceso BINGO: (MSG_BINGO)
+Recibe por parámetro la cantidad de Jugadores.
+Hilo Principal (main):
+• Lanza el ThreadBolillero.
+• Espera recibir por cola de mensaje el EVT_CARTON_LLENO; esto termina el proceso BINGO
+mostrando el número del jugador ganador.
+Hilo Bolillero:
+Genera en forma aleatoria números no repetitivos del 1 al 99 y los envía por medio del
+EVT_BOLILLA a todos los jugadores, repite esta acción cada N ms (N aleatorio entre 500 y
+5000ms).
+NOTA: utilizar Makefile con la estructura de archivos vista en clases
+
+mi logica es:
+El bingo da inico con enviar mensaje y el evento inicio
+el jugador.c recibe inicio y crea los threads osea 1 por cada jugador
+threadsJugador crea los cartones, 1 por cada jugador
+el jugador una vez que ya se crearon todos los cartones le hace un enviarmensaje al bingo con el evento inicio ack
+
+el bingo una vez que recibe el mensaje inicio_ack, crea los hilos del Bolillero con funcion ThreadBolillero
+el thread Bolillero le devuelve un numero generado aleatorio del 1 al 99 osea DESDE y HASTA
+
+el bingo recibe el numero del ThreadBolillero osea la bola, y le envia la bola al jugador
+el jugador recibe la bola y se la pasa al thread jugador 
+
+el thread jugador comprueba si esta en su vector, si lo esta suma a numero acertado
+si el threadsJugador llega a 5 numeros acertados, envia evento de carton EVT_CARTON_LLENO al jugador o algo aciertos
+
+el jugador le envia el evt carton lleno al bingo
+el bingo recibe el evento de carton lleno y finaliza todo

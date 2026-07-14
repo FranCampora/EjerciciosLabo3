@@ -1,0 +1,42 @@
+CONSIGNA PRACATICA FINAL CARRERA F1
+
+La carrera de F1:
+
+Se juega una carrera entre 10 paises, de formula 1.
+El ingreso de los países debe ser por teclado al iniciar el evento.
+Es una carrera en la que Ferrari y Mclaren son los más rápidos.
+
+Cada formula 1, avanza de 5 a 10 metros por 0,5segundos,
+pero si son Ferrari o Mclaren, avanzan de 6 a 12mt por 0,5segundos.
+
+Y cada vez que avanza, aleatoriamente debe chequear si choca o
+se sale de la pista (de 1 a 2, 2 sale de la pista y pierde la carrera).
+
+También, cuando supera los 50mt 100mt, 150mt, 200 mt y 250mt debe
+chequear si debe ir a boxes (entre 1 y 3, si sale 1 debe ir a boxes,
+y se pierde una vuelta, si sale 2 o 3 sigue corriendo).
+
+La carrera termina con el primer auto que llega a 295mt.
+ Si llega más de un auto a superar los 295mt,
+  el ganador es el que más puntos tiene y si hay con mismo valor en el mismo turno, es empate.
+
+Se contará con dos procesos.
+Se debe utilizar threads, cola de mensajes, y para el sincronismo usar mutex.
+Pueden ser un proceso por F1,o quizás le conviene más que uno de los procesos sea pista/tablero/cancha y
+el otro proceso sean los autos(threads).
+
+Puede utilizar los destinos y eventos que usted elija.
+
+Se debe mostrar lo que sucede en los dos procesos en todo momento, y cual jugador gano y el resultado.
+
+Se debe comenzar la carrera presionando una tecla cuando los dos procesos estén corriendo,
+ pero sería recomendable mediante memoria compartida o archivos.
+
+Pensar bien que/quien es cada proceso! Comenzar por lo mínimo, lo más importante es el sincronismo y
+que compile!.
+Si utiliza memoria dinámica debe liberar la memoria!
+Utilizar memoria compartida o un bucle, para siempre poder realizar las inicializaciones correspondientes, y no depender de correr un proceso determinado primero.
+Utilizar Makefile con la estructura de archivos vista en la cursada.
+Utilizar los delay (sleep) que correspondan.
+
+

@@ -1,0 +1,50 @@
+La carrera de los peces (supervivencia):
+
+Se juega una carrera entre peces de distintos océanos.
+En esta carrera, las corvinas quieren llegar a la meta,
+ pero hay tiburones y pulpos que quieren detenerlas. 
+Es una carrera de 130 metros.
+ Este valor debe ser enviado de un proceso a otro,
+  por memoria compartida al iniciar el proceso inicializador
+   (independientemente de cual se corra primero, Esto es mandatorio).
+
+El avance de cada pez es de 1 a 6 metros por vuelta,
+ pero los tiburones van cada vuelta de 1 a 8 metros.
+ Y los pulpos es de 1 a 3 mt por vuelta.
+  Cuando avanzan los peces, solo suman metros,
+   pero cuando avanzan los pulpos, pueden hacer perecer a los peces 
+   (es aleatorio 1 a 3, donde 1 los daña, y 2 y 3 no pasa nada;
+    y solo daña a los peces que están a máximo 10mt de cercanía),
+     esto ocurre por cada vuelta de los pulpos.
+ Con respecto al tiburón, por vuelta ataca a los peces 
+ (aleatorio, también de 1 a 3, 1 los hace perecer, 2 y 3 no pasa nada),
+  y solo daña a los peces que están a un máximo de 7mt. 
+Hay 3 peces, 1 tiburon y 2 pulpos.
+ Se puede ingresar el nombre de los peces,
+  tiburón y pulpo por teclado si lo desea.
+
+Si llega primero el tiburón o los pulpos, los peces perecen,
+ sino se salvan.
+
+Extra: Guardar en archivo los peces que ganaron o perdieron,
+ mismo tiburón y pulpos.
+
+Se contará con dos procesos.
+Se debe utilizar threads, cola de mensajes,
+ y para el sincronismo usar mutex.
+
+Puede utilizar los destinos y eventos que usted elija.
+ Para la comunicación entre procesos debe utilizar cola de mensajes.
+
+Se debe mostrar lo que sucede en los dos procesos en todo momento,
+ y cual jugador gano y el resultado.
+
+Debe utilizar archivos, para que pueda ejecutarse cualquier
+ proceso primero.
+
+Se puede hacer que comience la carrera presionando una tecla.
+
+Pensar bien que/quien es cada proceso! Comenzar por lo mínimo, lo más importante es el sincronismo, que comunique y que compile!.
+Si utiliza memoria dinámica debe liberar la memoria!
+Utilizar Makefile con la estructura de archivos vista en la cursada.
+Utilizar los delay (sleep) que correspondan.
